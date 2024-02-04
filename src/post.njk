@@ -1,7 +1,19 @@
 ---
 layout: base
-title: Blog
+title: post
 tags: post
+pagination:
+  data: testdata
+  size: 1
+  alias: dt
+  addAllPagesToCollections: true
+testdata:
+ - item1
+ - item2
+ - item3
+ - item4
 ---
 
-<h1>Blog post</h1>
+<h1>{{ title }}</h1>
+
+  <div>{{ dt }}</div>
