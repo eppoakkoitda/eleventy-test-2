@@ -1,19 +1,12 @@
 ---
 layout: base
 title: post
-tags: post
 pagination:
-  data: testdata
+  data: post
   size: 1
   alias: dt
-  addAllPagesToCollections: true
-testdata:
- - item1
- - item2
- - item3
- - item4
 ---
 
-<h1>{{ title }}</h1>
+<h1>{{ dt.title }}</h1>
 
-  <div>{{ dt }}</div>
+  <div>{{ dt.content }}</div>

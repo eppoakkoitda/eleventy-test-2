@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
   </head>
   <body>
+    <div hx-get="/partials/navigation/" hx-trigger="load"></div>
     {{content | safe}}
+    <div hx-get="/partials/footer/" hx-trigger="load"></div>
   </body>
 </html>

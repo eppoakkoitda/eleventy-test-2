@@ -9,27 +9,29 @@
     <link rel="stylesheet" href="/assets/css/tailwind.css">
   </head>
   <body>
+    <div hx-get="/partials/navigation/" hx-trigger="load"></div>
     
 <h1>Blog Home</h1>
 
 <ul>
     
         <li>
-            <a href="/post/">post</a>
+            <a href="/post/">item1</a>
         </li>
     
         <li>
-            <a href="/post/1/">post</a>
+            <a href="/post/1/">item2</a>
         </li>
     
         <li>
-            <a href="/post/2/">post</a>
+            <a href="/post/2/">item3</a>
         </li>
     
         <li>
-            <a href="/post/3/">post</a>
+            <a href="/post/3/">item4</a>
         </li>
     
 </ul>
+    <div hx-get="/partials/footer/" hx-trigger="load"></div>
   </body>
 </html>

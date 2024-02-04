@@ -1,12 +1,10 @@
+---
+data: menugroup
+---
 <header class="bg-black text-gray-50 py-4 sticky inset-0">
 <nav class="max-w-2xl mx-auto text-lg space-x-6">
-    {% for item in collections.page %}
-    <a href="{{ item.url }}"
-    {% if item.url == page.url %}
-        aria-current='page' data-state='active'
-    {% endif %}
-    class="hover:text-sky-400"
-    >{{ item.data.title }}</a>
+    {% for item in menugroup %}
+    <a href="{{ item.url }}" class="hover:text-sky-400">{{ item.title }}</a>
     {% endfor %}
 </nav>
 
