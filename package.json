@@ -1,16 +1,27 @@
 {
-  "name": "node-starter",
+  "name": "eleventy-test-2",
   "private": true,
   "scripts": {
-    "start": "node ./express/bin/www",
-    "build": "npx @11ty/eleventy"
+    "start": "node ./listener/bin/www",
+    "dev": "npm-run-all -p dev:*",
+    "build": "run-s build:*",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o listener/public/assets/css/tailwind.css --watch --postcss",
+    "build:11ty": "npx @11ty/eleventy",
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o listener/public/assets/css/tailwind.css --postcss"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "express": "^4.18.2",
-    "express-generator": "^4.16.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "express-generator": "^4.16.1",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1"
   }
 }
