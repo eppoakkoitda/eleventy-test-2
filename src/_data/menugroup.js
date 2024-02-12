@@ -1,6 +1,6 @@
 module.exports = function() {
     return [
-      {url:"/", title:"home"},
-      {url:"/blog/", title:"blog"}
+      {id:"1", url:"/mg/1/", title:"menugroup1"},
+      {id:"2", url:"/mg/2/", title:"menugroup2"}
     ];
   };
