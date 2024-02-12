@@ -5,8 +5,8 @@ pagination:
   size: 1
   alias: dt
 permalink: "{{ dt.url }}"
-
 ---
 
 <h1>{{ dt.title }}</h1>
-{% include "components/whatsnew.njk" %}
+<div>{{ test }}</div>
+{% render "components/whatsnew.liquid", input: whatsnew %}
